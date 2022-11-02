@@ -1,0 +1,323 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: rgb(240, 252, 255);
+    width: 100%;
+    font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
+    color: black;
+}
+#mainPage{
+    width: inherit;
+    position: relative;
+}
+#mainPage article{
+    width: inherit;
+    display: flex;
+}
+#mainPage .leftAside{
+    flex-basis: 25%;
+    height: 100vh;
+    overflow-y: hidden;
+    position: fixed;
+    left: 0;
+    right: 75%;
+}
+#mainPage .leftAside:hover{
+    overflow-y: scroll;
+}
+#mainPage .midAside{
+    flex-basis: 50%;
+    position: absolute;
+    left: 25%;
+    right: 25%;
+}
+#mainPage .rightAside{
+    flex-basis: 25%;
+    height: 100vh;
+    overflow-y: hidden;
+    position: fixed;
+    right: 0;
+    left: 80%;
+}
+#mainPage .rightAside:hover{
+    overflow-y: scroll;
+}
+.leftAside{
+    padding: 10px;
+}
+.leftAside header{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+.leftAside header div a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+}
+.leftAside header div a:hover{
+    background: white;
+    box-shadow: 1px 1px 5px #777;
+    border-radius: 5px;
+}
+.leftAside header div a img{
+    height: 30px;
+}
+.leftAside header div:first-child a img{
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+.leftAside header div a p{
+    padding-left: 10px;
+}
+.leftAside footer div a,.leftAside footer div p{
+    text-decoration: underline;
+    color: black;
+    padding: 5px;
+    font-size: 12px;
+}
+.midAside{
+    padding: 20px;
+}
+.midAside header div{
+    width: 95%;
+    display: flex;
+    height: 35vh;
+    gap: 20px;
+}
+.midAside .staticblock{
+    color: black;
+    width: 26.5%;
+    height: inherit;
+    position: relative;
+    box-shadow: 1px 1px 5px #777;
+    border-radius: 10px;
+}
+.midAside .staticblock img{
+    height: inherit;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.midAside .staticblock i{
+    position: absolute;
+    top: 65%;
+    left: 37%;
+    color: white;
+    font-size: 20px;
+    background-color: rgba(65, 105, 225, 0.692);
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 1;
+}
+.midAside .staticblock p{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: white;
+    width: 100%;
+    height: 24%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.midAside .dynamicBlock{
+    color: black;
+    width: 25%;
+    height: inherit;
+    position: relative;
+}
+.midAside .dynamicBlock .profileimg{
+    height: inherit;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.midAside .dynamicBlock .storyimg{
+    height: 40px;
+    width: 40px;
+    border: 3px solid rgb(159, 159, 239);
+    border-radius: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+.midAside .dynamicBlock p{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    height: 24%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.midAside main{
+    width: 85%;
+    margin: 0 auto;
+    padding: 10px;
+}
+.midAside .onYourMind{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 1px 1px 5px #777;
+    margin: 10px;
+}
+.midAside .onYourMind header{
+    display: flex;
+    width: inherit;
+}
+.midAside .onYourMind header a{
+    padding-right: 10px;
+}
+.midAside .onYourMind header button{
+    padding-right: 10px;
+    width: 100%;
+}
+.midAside .onYourMind img{
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+.midAside .onYourMind main{
+    display: flex;
+    width: inherit;
+    justify-content: space-between;
+}
+.midAside .onYourMind main div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.midAside .createRoom{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 1px 1px 5px #777;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 10px;
+}
+.midAside .createRoom header{
+    flex-basis: 35%;
+}
+.midAside .createRoom header a{
+    width: 95%;
+    padding: 10px;
+    border: #333 solid;
+    border-radius: 50px;
+    display: flex;
+    text-decoration: none;
+    color: black;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.midAside .createRoom header a:hover{
+    background: lightblue;
+}
+.midAside .createRoom main{
+    flex-basis: 70%;
+    display: flex;
+    overflow-x: hidden;
+}
+.midAside .createRoom main:hover{
+    overflow-x: scroll;
+}
+.midAside .createRoom main a{
+    display: flex;
+    text-decoration: none;
+    color: white;
+    margin-right: 10px;
+}
+.midAside .createRoom main a img{
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+.rightAside{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.rightAside .birthdays{
+    padding: 20px;
+}
+.rightAside .birthdays header{
+    font-size: 20px;
+}
+.rightAside .birthdays main{
+    padding: 10px;
+}
+.rightAside .contacts header div{
+    font-size: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.rightAside .contacts header div figure{
+    flex-basis: 50%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.rightAside .contacts header div figure a{
+    color: black;
+}
+.rightAside .contacts main{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+.rightAside .contacts main div{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+.rightAside .contacts main div a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+.rightAside .contacts main div a:hover{
+    background: white;
+    box-shadow: 1px 1px 5px #777;
+    border-radius: 5px;
+}
+.rightAside .contacts main div img{
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+.rightAside .contacts main div p{
+    padding-left: 10px;
+}
+.rightAside .groupConversation header p{
+    font-size: 20px;
+    padding: 20px;
+}
+.rightAside .groupConversation main div a{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
