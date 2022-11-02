@@ -6,7 +6,8 @@
 body{
     background: rgb(240, 252, 255);
     width: 100%;
-    font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
+    /* font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif; */
+    font-family: 'Courier New', Courier, monospace;
     color: black;
 }
 #mainPage{
